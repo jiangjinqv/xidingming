@@ -1,98 +1,276 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 添加描述和关键词 -->
-    <meta name="description" content="喜鼎茗茶叶官网，提供优质绿茶、红茶、单枞茶等多种茶叶产品，传承千年茶文化，品味纯正茶香。">
-    <meta name="keywords" content="喜鼎茗, 茶叶, 绿茶, 红茶, 单枞茶, 茶文化">
-    <title>喜鼎茗茶叶官网</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
+    <title>喜鼎茗 - 喜传千里，鼎立茗香</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background: linear-gradient(45deg, #3d5a3d, #4c704c);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #4c704c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .hero {
+            background-image: url('tea-bg.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .products {
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .product-card {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .product-card button {
+            background-color: #4c704c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-card button:hover {
+            background-color: #3d5a3d;
+        }
+        footer {
+            background-color: #3d5a3d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        body {
+            animation: fadeIn 1s ease-in;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: slideIn 1s ease-out;
+        }
+    </style>
+</div>
+<style>
+    /* 新增样式 */
+    .section {
+        padding: 60px 40px;
+        text-align: center;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .content img {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    .product-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .contact {
+        padding: 60px 40px;
+        background-color: #f0f0f0;
+    }
+    .contact-info {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    textarea {
+        height: 150px;
+    }
+</style>
+</div>
 
-<body>
-    <!-- 导航栏 -->
-    <header>
-        <!-- 在导航栏添加搜索框 -->
-        <nav>
-            <div class="logo">
-                <img src="../assets/images/logo.png" alt="喜鼎茗 logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="green-tea.html">绿茶</a></li>
-                <li><a href="black-tea.html">红茶</a></li>
-                <li><a href="dan-cong-tea.html">单枞茶</a></li>
-            </ul>
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="搜索茶叶产品">
-                <button type="button" id="search-button">搜索</button>
-            </div>
-            <div class="hamburger" aria-label="导航菜单切换">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- 英雄区域 -->
-    <section class="hero">
-        <div class="hero-content">
-            <!-- 使用新的 slogan -->
-            <h1>喜传千里 鼎立茗香</h1>
-            <p>精选优质茶叶，传承千年茶文化</p>
-            <a href="#" class="btn">了解更多</a>
-        </div>
-    </section>
+<header>
+    <h1>喜鼎茗</h1>
+    <p>喜传千里，鼎立茗香</p>
+</header>
 
-    <!-- 茶叶种类展示 -->
-    <section class="tea-types">
-        <h2>我们的茶叶种类</h2>
-        <div class="tea-cards">
-            <div class="tea-card">
-                <img src="../assets/images/green-tea.jpg" alt="绿茶">
-                <h3>绿茶</h3>
-                <p>清新爽口，富含多种营养成分</p>
-                <a href="green-tea.html" class="btn">查看详情</a>
-            </div>
-            <div class="tea-card">
-                <img src="../assets/images/black-tea.jpg" alt="红茶">
-                <h3>红茶</h3>
-                <p>醇厚香甜，温暖身心</p>
-                <a href="black-tea.html" class="btn">查看详情</a>
-            </div>
-            <div class="tea-card">
-                <img src="../assets/images/dan-cong-tea.jpg" alt="单枞茶">
-                <h3>单枞茶</h3>
-                <p>香气浓郁，口感独特</p>
-                <a href="dan-cong-tea.html" class="btn">查看详情</a>
-            </div>
-        </div>
-    </section>
-    <!-- 在茶叶种类展示区域后添加茶叶文化介绍 -->
-    <section class="tea-culture">
-        <h2>茶叶文化</h2>
-        <p>茶，作为中国传统文化的重要组成部分，有着悠久的历史和深刻的涵义。从神农尝百草发现茶的药用价值，到唐代茶圣陆羽著《茶经》，茶逐渐成为一种生活艺术和精神追求。</p>
-        <p>喜鼎茗传承千年茶文化，选用优质茶叶，遵循传统工艺，为您带来最纯正的茶香体验。无论是与亲朋好友品茶论道，还是独自静享午后时光，喜鼎茗的茶叶都能陪伴您度过美好的时刻。</p>
-    </section>
-    <!-- 页脚 -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>联系电话：123-456-7890</p>
-                <p>邮箱：info@xidingming.com</p>
-            </div>
-            <div class="footer-qr">
-                <img src="../assets/images/qr-code-wechat.jpg" alt="微信二维码">
-                <p>扫码关注我们的微信公众号</p>
-            </div>
-        </div>
-        <p class="copyright">© 2025 喜鼎茗 版权所有</p>
-    </footer>
+<nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#products">产品展示</a>
+    <a href="#contact">联系我们</a>
+</nav>
 
-    <script src="../scripts/main.js"></script>
+<div id="home" class="hero">
+    <h2>品味自然，感受茶香</h2>
+</div>
+
+<div id="about" class="section">
+    <h2>关于我们</h2>
+    <div class="content">
+        <p>喜鼎茗创立于2010年，致力于传承中国茶文化，精选优质茶叶，为茶爱好者提供最纯正的品茶体验。我们坚持传统工艺，结合现代技术，确保每一片茶叶都能展现其独特风味。</p>
+        <img src="tea-farm.jpg" alt="茶园">
+    </div>
+</div>
+
+<div id="products" class="products">
+    <h2>我们的产品</h2>
+    <div class="product-card">
+        <img src="longjing.jpg" alt="龙井茶">
+        <h3>龙井茶</h3>
+        <p>清香四溢，回味悠长</p>
+        <button>了解更多</button>
+    </div>
+    <div class="product-card">
+        <img src="puer.jpg" alt="普洱茶">
+        <h3>普洱茶</h3>
+        <p>陈香浓郁，醇厚甘甜</p>
+        <button>了解更多</button>
+    </div>
+    <div class="product-card">
+        <img src="tieguanyin.jpg" alt="铁观音">
+        <h3>铁观音</h3>
+        <p>香气馥郁，nassasterem</p>
+        <button>了解更多</button>
+    </div>
+</div>
+
+<div id="contact" class="contact">
+    <h2>联系我们</h2>
+    <div class="contact-info">
+        <p>地址：中国广东省广州市番禺区</p>
+        <p>电话：+86 18198998967</p>
+        <p>邮箱：jiang@xdm.ac.cn</p>
+        <form>
+            <input type="text" placeholder="您的姓名" required>
+            <input type="email" placeholder="您的邮箱" required>
+            <textarea placeholder="您的留言" required></textarea>
+            <button type="submit">发送</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <p>© 2023 喜鼎茗 版权所有</p>
+</footer>
 </body>
-
 </html>
+
+<style>
+    /* 新增平滑滚动 */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* 优化导航栏 */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    nav a {
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+    }
+    nav a:hover {
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 5px;
+    }
+
+    /* 添加页面切换动画 */
+    .section, .products, .contact {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+    }
+    .section.active, .products.active, .contact.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 改进产品展示布局 */
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 80px 40px;
+    }
+    .product-card {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* 优化图片展示 */
+    .content img {
+        transition: transform 0.3s ease;
+    }
+    .content img:hover {
+        transform: scale(1.02);
+    }
+</style>
+
+<script>
+    // 添加页面滚动动画
+    const sections = document.querySelectorAll('.section, .products, .contact');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
