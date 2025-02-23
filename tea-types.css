@@ -1,0 +1,202 @@
+/* 新增全局变量 */
+:root {
+  --primary-color: #e67e22;
+  --secondary-color: #2c3e50;
+  --gradient-bg: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* 优化页面背景 */
+.tea-detail {
+  background: var(--gradient-bg);
+  padding: 4rem 1rem;
+}
+
+/* 优化标题样式 */
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+}
+
+/* 优化卡片布局 */
+.card {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 优化图片区域 */
+.card-media {
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-media::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+
+/* 优化内容区域 */
+.card-content {
+  padding: 2rem;
+}
+
+.card-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* 优化按钮样式 */
+.btn-primary {
+  background: var(--primary-color);
+  border: none;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255,255,255,0.15);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+
+.btn-primary:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #e67e22;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #d35400;
+    transform: translateX(5px);
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .icon {
+    transform: translateX(3px);
+}
+/* 新增加载动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* 新增卡片入场动画 */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.card:nth-child(1) { animation: slideUp 0.6s ease 0.2s forwards; }
+.card:nth-child(2) { animation: slideUp 0.6s ease 0.4s forwards; }
+.card:nth-child(3) { animation: slideUp 0.6s ease 0.6s forwards; }
+.tea-detail {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}

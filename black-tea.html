@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="喜鼎茗红茶，醇厚香甜，温暖身心。了解喜鼎茗红茶的地理环境、采摘、制作工艺等详细信息。">
+    <meta name="keywords" content="喜鼎茗, 红茶, 茶叶, 茶文化">
+    <title>喜鼎茗红茶</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="喜鼎茗 logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="green-tea.html">绿茶</a></li>
+                <li><a href="black-tea.html">红茶</a></li>
+                <li><a href="dan-cong-tea.html">单枞茶</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="搜索茶叶产品">
+                <button type="submit">搜索</button>
+            </div>
+            <div class="hamburger" aria-label="导航菜单切换">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>喜传千里 鼎立茗香</h1>
+            <p>品味喜鼎茗红茶的醇厚与温暖</p>
+            <a href="#" class="btn">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 红茶详情区域 -->
+    <section class="tea-detail">
+        <h2>喜鼎茗红茶</h2>
+        <img 
+            srcset="../assets/images/black-tea-small.jpg 480w, 
+                    ../assets/images/black-tea-medium.jpg 800w, 
+                    ../assets/images/black-tea-large.jpg 1200w"
+            sizes="(max-width: 480px) 480px, 
+                   (max-width: 800px) 800px, 
+                   1200px"
+            src="../assets/images/black-tea-medium.jpg" 
+            alt="红茶"
+        >
+        <p>喜鼎茗红茶，以其醇厚香甜的口感和温暖身心的特质，成为众多茶友的心头好。每一口都能让您感受到浓郁的茶香和独特的风味。</p>
+        <p><strong>产地</strong>：中国福建武夷山，这里独特的地理环境和气候条件孕育出品质卓越的红茶原料。</p>
+        <p><strong>采摘时间</strong>：每年春季和秋季，此时茶叶的香气和口感达到最佳状态。</p>
+        <p><strong>制作工艺</strong>：经过萎凋、揉捻、发酵、干燥等多道复杂工序，严格遵循传统工艺，确保每一杯红茶都能呈现出最佳的风味。</p>
+        <p><strong>功效与作用</strong>：红茶中含有丰富的茶多酚和咖啡因，具有提神醒脑、促进消化、暖胃等功效。</p>
+        <!-- 在红茶详情区域添加冲泡建议和搭配食物 -->
+        <p><strong>冲泡建议</strong>：使用 90 - 95℃ 的热水冲泡，每 150ml 水搭配 3 - 5 克茶叶，浸泡 3 - 5 分钟即可。</p>
+        <p><strong>搭配食物</strong>：红茶适合搭配甜点、巧克力、奶酪等食物，口感更加丰富。</p>
+    </section>
+    <!-- 在页脚之前添加用户评价区域 -->
+    <section class="user-reviews">
+        <h2>用户评价</h2>
+        <div class="review">
+            <p class="review-text">喜鼎茗的红茶口感醇厚，香气浓郁，非常适合冬天饮用，暖身又暖心！</p>
+            <p class="review-author">- 茶友 A</p>
+        </div>
+        <div class="review">
+            <p class="review-text">一直很喜欢喝红茶，喜鼎茗的红茶品质上乘，以后会一直回购的。</p>
+            <p class="review-author">- 茶友 B</p>
+        </div>
+        <form class="review-form" id="black-tea-review-form">
+            <h3>留下你的评价</h3>
+            <textarea id="black-tea-review-text" placeholder="写下你的品茶感受"></textarea>
+            <input type="text" id="black-tea-review-author" placeholder="你的昵称">
+            <button type="submit">提交评价</button>
+        </form>
+        <div class="reviews" id="black-tea-reviews"></div>
+    </section>
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>联系电话：123-456-7890</p>
+                <p>邮箱：info@xidingming.com</p>
+            </div>
+            <div class="footer-qr">
+                <img src="../assets/images/qr-code-wechat.jpg" alt="微信二维码">
+                <p>扫码关注我们的微信公众号</p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 喜鼎茗 版权所有</p>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+/* 全局样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9900;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #FFB74D;
+}
+.hero h1 {
+    font-size: 3.5rem; /* 增大英雄区域标题字体大小 */
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.4rem; /* 增大英雄区域段落字体大小 */
+    margin-bottom: 2rem;
+}
+.tea-detail h2 {
+    font-size: 2.5rem; /* 增大详情页标题字体大小 */
+}
+.tea-detail p {
+    font-size: 1.1rem; /* 增大详情页段落字体大小 */
+}
+.tea-detail {
+    padding: 6rem 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.tea-detail h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.tea-detail img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.tea-detail p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+.tea-detail {
+    padding: 40px 0;
+    text-align: center;
+}
+.user-reviews {
+    padding: 40px 0;
+    text-align: center;
+}
+.user-reviews h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.review {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.review-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.review-author {
+    font-size: 14px;
+    color: #777;
+}
+.review-form {
+    text-align: left;
+}
+.review-form h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.review-form textarea,
+.review-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.review-form button {
+    padding: 12px 25px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+.review-form button:hover {
+    background-color: #FFB74D;
+}
+.review-form button {
+    width: 100%;
+}
+/* 为分享按钮添加动画效果 */
+.share-buttons .share-btn {
+    transition: transform 0.3s ease;
+}
+.share-buttons .share-btn:hover {
+    transform: scale(1.2); /* 鼠标悬停时放大按钮 */
+}
+/* 为茶叶图片添加淡入动画 */
+.tea-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.3s ease;
+    opacity: 0; /* 初始透明度为 0 */
+    animation: fadeIn 1s ease forwards; /* 添加淡入动画 */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* 初始位置向下偏移 20px */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 最终位置恢复正常 */
+    }
+}
+
+.tea-detail img:hover {
+    transform: scale(1.05);
+}
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.footer-info p {
+    margin-bottom: 0.5rem;
+}
+.footer-qr img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+}
+.copyright {
+    margin-top: 2rem;
+}
+/* 响应式设计 */
+header {
+    background-color: #263238;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #FF9900;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #e68a00;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* 小屏幕设备导航栏样式 */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-links.active {
+        right: 0;
+        max-height: 300px;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}/* 茶叶详情板块样式 */
+.tea-detail {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fdf6ec; /* 浅米色背景，营造温馨氛围 */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.tea-detail h2 {
+    font-size: 32px;
+    color: #4e342e; /* 深棕色标题，突出显示 */
+    margin-bottom: 25px;
+    text-transform: capitalize; /* 首字母大写 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 茶叶种类容器样式 */
+.tea-types {
+    display: flex;
+    /* 允许换行，当空间不足时自动换行 */
+    flex-wrap: wrap; 
+    /* 水平居中排列 */
+    justify-content: center; 
+    /* 交叉轴上居中对齐 */
+    align-items: stretch; 
+    /* 元素之间的间距 */
+    gap: 30px; 
+}
+
+/* 单个茶叶种类样式 */
+.tea-type {
+    /* 每个茶叶类型的基础宽度，可根据实际情况调整 */
+    flex: 1 1 calc(33.333% - 30px); 
+    max-width: 320px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* 确保图片圆角生效 */
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.tea-type:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tea-type img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* 保持图片比例并覆盖容器 */
+    border-bottom: 3px solid #ffb74d; /* 图片底部添加橙色边框 */
+}
+
+.tea-type-content {
+    padding: 20px;
+}
+
+.tea-type h3 {
+    font-size: 20px;
+    color: #4e342e;
+    margin-bottom: 10px;
+}
+
+.tea-type p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #6d4c41;
+    margin-bottom: 15px;
+}
+
+/* 查看详情按钮样式 */
+.tea-type .btn {
+    display: inline-block;
+    background-color: #ffb74d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tea-type .btn:hover {
+    background-color: #ffa726;
+}

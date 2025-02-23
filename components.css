@@ -1,0 +1,30 @@
+/* 评分系统 */
+.stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: 1.2em;
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffb400 var(--percent), #ddd var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Cookie弹窗 */
+.cookie-consent {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transform: translateY(150%);
+  transition: transform 0.3s ease;
+  
+  &.active {
+    transform: translateY(0);
+  }
+}
